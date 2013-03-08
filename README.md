@@ -1,13 +1,14 @@
 Assignment 1
-- Create a "TVFinder" webpage
+============
+Create a "TVFinder" webpage
 
 Overview
-========
+--------
 The file "Concept.png" contains a mock-up for a proposed TVFinder feature. Your assignment for Week 1 is to implement a working webpage version of this design.
 
 
 Details
-=======
+-------
 - As with all assignments, you need to ensure the implementation adheres closely to the mock-up in a wide variety of browsers. For this assignment, consider IE 9+, Firefox 18+, and Chrome 25+ as browsers you must support.
 
 - Don't take short-cuts on the page implementation; implement the page as you think a real production webpage should be structured (e.g., don't put an image in place of the "Search" box; put a real search box there).
@@ -32,7 +33,7 @@ Details
 
 
 Goals
-=====
+-----
 The goal of this assignment is to give you an opportunity to learn and demonstrate the following skills:
 - Modern HTML structure and vocabulary
 - Core CSS concepts
