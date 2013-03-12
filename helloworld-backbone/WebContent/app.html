@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>hello-backbonejs</title>
+<link rel="stylesheet"
+	href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
+<link rel="stylesheet" href="css/app.css" />
+<link rel="stylesheet" href="css/selectBoxIt.css" />
+</head>
+<body>
+	<div id="app">
+		<div id="header"></div>
+		<div id="control-panel">
+			<div>
+				<label class="ui-widget"><input type="checkbox"
+					id="animation-checkbox" class="ui-widget" checked>Enable
+					Animation</label>
+			</div>
+			<table id="control-panel-layout">
+				<tr>
+					<td id="tvfinder-logo-col"><img src="img/tvfinder-logo.png" /></td>
+					<td id="size-slider-col"><label class="ui-widget">Size<br />
+							<div id="size-slider"></div>
+					</label></td>
+					<td id="type-dropdown-col"><label class="ui-widget">Type<br /><select
+							id="type-dropdown">
+								<option value="All" selected>All</option>
+						</select>
+
+					</label></td>
+					<td  id="brand-dropdown-col"><label class="ui-widget">Brand<br /><select
+							id="brand-dropdown">
+								<option value="All" selected>All</option>
+						</select>
+					</label></td>
+					<td  id="sort-dropdown-col"><label class="ui-widget">Sort<br /><select
+							id="sort-dropdown">
+								<option value="price">Price</option>
+								<option value="size">Size</option>
+								<option value="rating">Rating</option>
+						</select>
+					</label></td>
+				</tr>
+				<tr>
+				<td colspan="5"><hr /></td>
+				</tr>
+				<tr>
+					<td colspan="4"><span id="match-count">0 MATCH</span> FOR TELEVISIONS FITTING THAT
+				CRITERIA</td>
+
+					<td><button id="clear-button" class="ui-widget">Clear Filters</button>
+					</td>
+				</tr>
+			</table>
+
+			<div>
+
+			</div>
+					</div>
+		<div id="product-display-rack"></div>
+		<div id="footer"></div>
+	</div>
+
+	<script src="js/lib/jquery.min.js"></script>
+	<script src="js/lib/jquery-ui.min.js"></script>
+	<script src="js/lib/underscore-min.js"></script>
+	<script src="js/lib/backbone-min.js"></script>
+	
+	<script src="js/lib/jquery.selectBoxIt.min.js"></script>
+	<script src="js/lib/jquery.raty.min.js"></script>
+
+
+	<!--  template  -->
+	<script type="text/template" id="product-template">
+	<img class="product-image" src="<%= image %>" />
+	<div><%= name %></div>
+	<!-- <div><%= description %></div> -->
+	<div>$<%= price.toFixed(2) %></div>
+	<div class="rating"></div>
+	
+  	</script>
+	<script type="text/template" id="app-template">
+		<div class="product"></div>
+  	</script>
+
+
+	<!--  script -->
+	<script src="js/ProductModel.js"></script>
+	<script src="js/ProductCollection.js"></script>
+	<script src="js/ProductView.js"></script>
+	<script src="js/AppView.js"></script>
+
+	<script type="text/javascript">
+		app.productCollection = new app.ProductCollection();
+
+		app.appView = new app.AppView({
+			collection : app.productCollection
+		});
+	</script>
+
+</body>
+</html>

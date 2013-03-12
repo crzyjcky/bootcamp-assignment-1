@@ -1,0 +1,84 @@
+.product {
+	position: absolute;
+	--width: 256px;
+	--height: 280px;
+	--border: 1px solid black;
+}
+
+.product-hover {
+	border: 1px solid blue;
+}
+
+.product-selected {
+	background-color: pink;
+}
+
+.product-image {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#control-panel-layout {
+	width: 100%;
+}
+
+#tvfinder-logo-col, #size-slider-col, #type-dropdown-col, #brand-dropdown-col, #sort-dropdown-col {
+	width: 15%;
+}
+
+#size-slider-col {
+	width: 40%;
+}
+
+#size-slider {
+	margin-right: 20px;
+}
+
+#match-count {
+	font-weight: bold;	
+}
+
+body {
+	font-family: Verdana, Geneva, sans-serif;
+}
+
+body, div {
+	margin: 0;
+	padding: 0;
+}
+
+#app {
+	margin-left: auto;
+	margin-right: auto;
+	width: 1024px;
+}
+
+#header {
+	width: 1024px;
+	height: 515px;
+	background-image:url("../img/slices/concept_01.png");
+}
+
+#control-panel {
+	width: 1024px;
+	height: 215px;
+	--background-image:url("../img/slices/concept_02.png");
+	--visibility: hidden;
+	--display: none;
+	opacity: 0.0;
+}
+
+#product-display-rack {
+	position: relative;
+	width: 1024px;
+	height: 625px;
+	--border: 1px solid black;
+	--background-image:url("../img/slices/concept_03.png");
+}
+
+#footer {
+	width: 1024px;
+	height: 541px;
+	background-image:url("../img/slices/concept_04.png");
+}
